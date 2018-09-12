@@ -1,0 +1,187 @@
+@media (max-width: 767px) {
+  .navbar-collapsed{
+    display: none;
+  }
+}
+body{
+  padding-top: 70px;
+  background: #2BC0E4; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #2BC0E4 , #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+button:focus{
+  outline: none !important;
+}
+.timer-display{
+  margin: 20px auto;
+  font-size: 2em;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.timer-display input, label{
+  width: 40%;
+  text-align: center;
+  border: 1px transparent;
+  border-radius: 4px;
+}
+.timer-display label{
+  margin-right: 5px;
+  margin-bottom: 0;
+  background-color: #f3f3f3;
+}
+.timer-bg{
+  width: 100%;
+  padding-top: 30%;
+  padding-bottom: 30%;
+  background-color: #f3f3f3;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.tk-btn{
+  padding: 0.5em 1em;
+  font-size: 2em;
+  border: 0.1em solid transparent;
+  border-radius: 0.3em;
+}
+.card-display{
+  width: 50%;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 10px 6px -6px #777;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.carousel{
+  padding-bottom: 20px;
+  text-align: center;
+  padding: 50px;
+}
+.carousel img{
+  width: 70px !important;
+  margin: 0 auto;
+}
+.carousel-nav{
+  cursor: pointer;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  font-size: 1.5em;
+}
+.carousel-nav:hover{
+  opacity: 1;
+}
+.d-icon{
+  color: #d9534f;
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.horizontal-scroll-display{
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+  overflow-x: scroll;
+  background-color: #f3f3f3;
+  margin: 5px 0 5px;
+}
+.horizontal-scroll-display div{
+  display: inline-block;
+  transform: scale(0.75);
+}
+.icon-bar{
+  background-color: #fff;
+}
+.sd-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border-radius: 4px;
+}
+.tk-btn{
+  color: #2980b9;
+  background-color: #fff;
+  border-color: #2980b9;
+}
+.tk-active{
+  background-color: #2980b9 ;
+  color: #fff ;
+}
+.add-ovflw{
+  max-height: 100px;
+  overflow-y: scroll;
+}
+.blur{
+  opacity: 0.5;
+}
+.button-pannel{
+  height: 50px;
+  padding-top: 10px;
+}
+.hidden{
+  display: none;
+}
+.light-text{
+  color: rgb(160, 160, 160);
+  font-size: 0.7em;
+  margin: 0;
+}
+.m5{
+  margin: 5px;
+}
+.tk-navbar{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #343a40;
+}
+.tk-navbar a, .navbar-brand{
+  color: #fff;
+}
+.nav>li>a:focus, .nav>li>a:hover, .tk-nav-active{
+  background-color: #eee;
+  color: #343a40 !important;
+}
+.vertical-align-top{
+  vertical-align: top;
+}
+.light-underline{
+  padding: 5px;
+  border-bottom: 0.5px solid rgb(220, 220, 220);
+  cursor: pointer;
+}
+.lh3{
+  line-height: 3;
+}
+.time-display {
+  display: inline-flex;
+  width: 100%;
+  border: 1px solid #283242;
+  border-radius: 4px;
+  padding: 3px 10px 3px 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.25);
+  margin: 5px;
+  font-size: 1.3em;
+}
+.absorbing{
+  width: 100%;
+  padding-top: 3px;
+}
+
+.tk-input{
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: 3px;
+}
