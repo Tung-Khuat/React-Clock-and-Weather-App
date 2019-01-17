@@ -1,7 +1,7 @@
 # TK-React-Clock-and-Weather-App
 
 ## Demo
-[Live DEMO](https://tungkhuat.herokuapp.com/)
+[Live DEMO](https://tung-khuat.github.io/React-Clock-and-Weather-App/)
 
 ## Installation
 [node.js](http://nodejs.org/download/) is required for ``npm``.
