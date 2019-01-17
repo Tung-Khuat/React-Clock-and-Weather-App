@@ -80,13 +80,15 @@
 	
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var createStoreWithMiddleware = (0, _redux.applyMiddleware)((0, _reduxLogger2.default)(), _reduxThunk2.default)(_redux.createStore);
 	
-	_reactDom2.default.render(_react2.default.createElement(_reactRedux.Provider, { store: createStoreWithMiddleware(_reducers2.default) }, _react2.default.createElement(_reactRouter.Router, { history: _reactRouter.hashHistory, routes: _routes2.default })), document.querySelector('.container'));
+	_reactDom2.default.render(_react2.default.createElement(
+	  _reactRedux.Provider,
+	  { store: createStoreWithMiddleware(_reducers2.default) },
+	  _react2.default.createElement(_reactRouter.Router, { history: _reactRouter.hashHistory, routes: _routes2.default })
+	), document.querySelector('.container'));
 
 /***/ }),
 /* 1 */
@@ -27276,9 +27278,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var App = function (_Component) {
 	  (0, _inherits3.default)(App, _Component);
@@ -27291,7 +27291,15 @@
 	  (0, _createClass3.default)(App, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, _react2.default.createElement('div', null, this.props.children));
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          this.props.children
+	        )
+	      );
 	    }
 	  }]);
 	  return App;
@@ -28877,9 +28885,7 @@
 	
 	var _reducerWeather2 = _interopRequireDefault(_reducerWeather);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var rootReducer = (0, _redux.combineReducers)({
 	  ClockStores: _reducerClock2.default,
@@ -28930,9 +28936,7 @@
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var INITIAL_STATE = { displayList: [{ offset: 0, textDisplay: 'GMT' }], timeInterval: null };
 
@@ -41635,9 +41639,7 @@
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var INITIAL_STATE = { weatherProvider: [] };
 
@@ -41673,11 +41675,15 @@
 	
 	var _weatherPage2 = _interopRequireDefault(_weatherPage);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = _react2.default.createElement(_reactRouter.Route, { path: '/', component: _app2.default }, _react2.default.createElement(_reactRouter.IndexRoute, { component: _clockPage2.default }), _react2.default.createElement(_reactRouter.Route, { path: '/clock', component: _clockPage2.default }), _react2.default.createElement(_reactRouter.Route, { path: '/weather', component: _weatherPage2.default }));
+	exports.default = _react2.default.createElement(
+	  _reactRouter.Route,
+	  { path: '/', component: _app2.default },
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _clockPage2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/clock', component: _clockPage2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/weather', component: _weatherPage2.default })
+	);
 
 /***/ }),
 /* 361 */
@@ -41713,9 +41719,7 @@
 	
 	var _navBar2 = _interopRequireDefault(_navBar);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var IndexPage = function (_Component) {
 	  (0, _inherits3.default)(IndexPage, _Component);
@@ -41728,7 +41732,12 @@
 	  (0, _createClass3.default)(IndexPage, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, _react2.default.createElement(_navBar2.default, null), 'Hello World!');
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_navBar2.default, null),
+	        'Hello World!'
+	      );
 	    }
 	  }]);
 	  return IndexPage;
@@ -41770,9 +41779,7 @@
 	
 	var _reactRouter = __webpack_require__(197);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Navigations = [{ displayName: 'Clock', path: '/clock' }, { displayName: 'Weather', path: '/weather' }];
 	
@@ -41801,9 +41808,54 @@
 	      var _this2 = this;
 	
 	      console.log(this.props.currentPath);
-	      return _react2.default.createElement('nav', { className: 'navbar tk-navbar navbar-fixed-top' }, _react2.default.createElement('div', { className: 'container-fluid' }, _react2.default.createElement('div', { className: 'navbar-header' }, _react2.default.createElement('button', { type: 'button', className: 'navbar-toggle collapsed', onClick: this.handleClick }, _react2.default.createElement('span', { className: 'sr-only' }, 'Toggle navigation'), _react2.default.createElement('span', { className: 'icon-bar' }), _react2.default.createElement('span', { className: 'icon-bar' }), _react2.default.createElement('span', { className: 'icon-bar' })), _react2.default.createElement('div', { className: 'navbar-brand' }, 'RCnW')), _react2.default.createElement('div', { className: this.state.condition ? 'navbar-collapsed' : '' }, _react2.default.createElement('ul', { className: 'nav navbar-nav navbar-left' }, Navigations.map(function (nav, i) {
-	        return _react2.default.createElement('li', { key: i }, _react2.default.createElement(_reactRouter.Link, { to: nav.path, className: nav.path == _this2.props.currentPath ? 'tk-nav-active' : '' }, nav.displayName));
-	      })))));
+	      return _react2.default.createElement(
+	        'nav',
+	        { className: 'navbar tk-navbar navbar-fixed-top' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container-fluid' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'navbar-header' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'button', className: 'navbar-toggle collapsed', onClick: this.handleClick },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'sr-only' },
+	                'Toggle navigation'
+	              ),
+	              _react2.default.createElement('span', { className: 'icon-bar' }),
+	              _react2.default.createElement('span', { className: 'icon-bar' }),
+	              _react2.default.createElement('span', { className: 'icon-bar' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'navbar-brand' },
+	              'RCnW'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: this.state.condition ? 'navbar-collapsed' : '' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'nav navbar-nav navbar-left' },
+	              Navigations.map(function (nav, i) {
+	                return _react2.default.createElement(
+	                  'li',
+	                  { key: i },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: nav.path, className: nav.path == _this2.props.currentPath ? 'tk-nav-active' : '' },
+	                    nav.displayName
+	                  )
+	                );
+	              })
+	            )
+	          )
+	        )
+	      );
 	    }
 	  }]);
 	  return NavBar;
@@ -41861,9 +41913,7 @@
 	
 	var _timer2 = _interopRequireDefault(_timer);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// Available options for this section
 	var ClockOptions = {
@@ -41913,7 +41963,13 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, _react2.default.createElement(_navBar2.default, { currentPath: this.props.location.pathname }), _react2.default.createElement(_tabButtons2.default, { data: TabsDisplayed, handleOnClick: this.handleOnClick, active: this.state.active }), this.renderSelectedUtility());
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_navBar2.default, { currentPath: this.props.location.pathname }),
+	        _react2.default.createElement(_tabButtons2.default, { data: TabsDisplayed, handleOnClick: this.handleOnClick, active: this.state.active }),
+	        this.renderSelectedUtility()
+	      );
 	    }
 	  }]);
 	  return ClockIndex;
@@ -41955,9 +42011,7 @@
 	
 	var _reactRedux = __webpack_require__(159);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	/* Require
 	data: [{name, id}]
@@ -42000,14 +42054,22 @@
 	      var _this2 = this;
 	
 	      this.calcButtonLength();
-	      return _react2.default.createElement('button', { key: data.id, className: this.addClassName(data.id), onClick: function onClick() {
-	          return _this2.props.handleOnClick(data.id, _this2.props.data);
-	        }, style: this.calcButtonLength() }, data.name);
+	      return _react2.default.createElement(
+	        'button',
+	        { key: data.id, className: this.addClassName(data.id), onClick: function onClick() {
+	            return _this2.props.handleOnClick(data.id, _this2.props.data);
+	          }, style: this.calcButtonLength() },
+	        data.name
+	      );
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, this.props.data.map(this.renderButtons));
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.props.data.map(this.renderButtons)
+	      );
 	    }
 	  }]);
 	  return TabButtons;
@@ -42061,9 +42123,7 @@
 	
 	var _index = __webpack_require__(369);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var WorldClock = function (_React$Component) {
 	  (0, _inherits3.default)(WorldClock, _React$Component);
@@ -42092,9 +42152,37 @@
 	          } });
 	      }
 	      return displayList.map(function (item, i) {
-	        return _react2.default.createElement('div', { key: i, className: 'time-display' }, _react2.default.createElement('span', { className: 'lh3 ' + (_this2.state.isEditing ? '' : 'hidden'), onClick: function onClick() {
-	            return _this2.props.removeTimeDisplay(i);
-	          } }, _react2.default.createElement('i', { className: 'fa fa-times-circle d-icon' })), _react2.default.createElement('span', { className: 'absorbing' }, _react2.default.createElement('strong', null, item.textDisplay), _react2.default.createElement('p', { className: 'light-text' }, item.offset, ' Hours offset')), _react2.default.createElement('span', null, _react2.default.createElement(_timeDisplay2.default, { offset: item.offset })));
+	        return _react2.default.createElement(
+	          'div',
+	          { key: i, className: 'time-display' },
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'lh3 ' + (_this2.state.isEditing ? '' : 'hidden'), onClick: function onClick() {
+	                return _this2.props.removeTimeDisplay(i);
+	              } },
+	            _react2.default.createElement('i', { className: 'fa fa-times-circle d-icon' })
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'absorbing' },
+	            _react2.default.createElement(
+	              'strong',
+	              null,
+	              item.textDisplay
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'light-text' },
+	              item.offset,
+	              ' Hours offset'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            _react2.default.createElement(_timeDisplay2.default, { offset: item.offset })
+	          )
+	        );
 	      });
 	    }
 	  }, {
@@ -42110,7 +42198,26 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'card-display' }, _react2.default.createElement('button', { className: 'sd-btn tk-btn m5 ' + (this.state.isEditing ? 'hidden' : ''), onClick: this.handleOnAddClick }, this.state.isAdding ? 'Cancel' : 'Add'), _react2.default.createElement('button', { className: 'sd-btn btn-danger m5 ' + (this.state.isEditing ? '' : 'hidden'), onClick: this.props.clearAllDisplay }, 'Clear All'), _react2.default.createElement('button', { className: 'sd-btn tk-btn m5 ' + (this.state.isAdding ? 'hidden' : ''), onClick: this.handleOnEditClick }, this.state.isEditing ? 'Done' : 'Edit'), this.renderTimeDisplay());
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'card-display' },
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn tk-btn m5 ' + (this.state.isEditing ? 'hidden' : ''), onClick: this.handleOnAddClick },
+	          this.state.isAdding ? 'Cancel' : 'Add'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn btn-danger m5 ' + (this.state.isEditing ? '' : 'hidden'), onClick: this.props.clearAllDisplay },
+	          'Clear All'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn tk-btn m5 ' + (this.state.isAdding ? 'hidden' : ''), onClick: this.handleOnEditClick },
+	          this.state.isEditing ? 'Done' : 'Edit'
+	        ),
+	        this.renderTimeDisplay()
+	      );
 	    }
 	  }]);
 	  return WorldClock;
@@ -42152,9 +42259,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var TimeDisplay = function (_React$Component) {
 	  (0, _inherits3.default)(TimeDisplay, _React$Component);
@@ -42230,7 +42335,19 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, _react2.default.createElement('span', { id: 'clock', ref: 'clock', className: 'lh3' }, this.state.hours, ':', this.state.minutes, ':', this.state.seconds));
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'span',
+	          { id: 'clock', ref: 'clock', className: 'lh3' },
+	          this.state.hours,
+	          ':',
+	          this.state.minutes,
+	          ':',
+	          this.state.seconds
+	        )
+	      );
 	    }
 	  }]);
 	  return TimeDisplay;
@@ -42274,9 +42391,7 @@
 	
 	var _index = __webpack_require__(369);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var AddTimezone = function (_React$Component) {
 	  (0, _inherits3.default)(AddTimezone, _React$Component);
@@ -42292,15 +42407,23 @@
 	      var _this2 = this;
 	
 	      return _timezone.timezone.map(function (zone, i) {
-	        return _react2.default.createElement('div', { className: 'light-underline', key: i, onClick: function onClick() {
-	            _this2.props.addTimeDisplay(zone.offset, zone.value);_this2.props.cback();
-	          }, value: zone.offset }, zone.text);
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'light-underline', key: i, onClick: function onClick() {
+	              _this2.props.addTimeDisplay(zone.offset, zone.value);_this2.props.cback();
+	            }, value: zone.offset },
+	          zone.text
+	        );
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, this.renderDropdownItem());
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.renderDropdownItem()
+	      );
 	    }
 	  }]);
 	  return AddTimezone;
@@ -43012,13 +43135,11 @@
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var OPEN_WEATHER_BASE_URL = 'http://api.openweathermap.org/data/2.5';
+	var OPEN_WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 	var OPEN_WEATHER_API_KEY = 'f100da1908a9af01424638ea11cc9c20';
-	var OPEN_WEATHER_IMG_URL = 'http://openweathermap.org/img/w';
+	var OPEN_WEATHER_IMG_URL = 'https://openweathermap.org/img/w';
 	
 	function getWeather(url) {
 	  return new Promise(function (resolve, reject) {
@@ -44719,9 +44840,7 @@
 	
 	var _getTime2 = _interopRequireDefault(_getTime);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var time = new _getTime2.default();
 	
@@ -44810,13 +44929,65 @@
 	      var _this5 = this;
 	
 	      return this.state.markedTimes.map(function (time, i) {
-	        return _react2.default.createElement('div', { key: i, className: 'light-underline' }, _react2.default.createElement('span', null, 'Mark ', _this5.state.markedTimes.length - i, ' '), _react2.default.createElement('span', { className: 'timer' }, time));
+	        return _react2.default.createElement(
+	          'div',
+	          { key: i, className: 'light-underline' },
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            'Mark ',
+	            _this5.state.markedTimes.length - i,
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'timer' },
+	            time
+	          )
+	        );
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'card-display' }, _react2.default.createElement('div', { className: 'timer-bg' }, time.getTime(this.state.timeInterval)), _react2.default.createElement('div', { className: 'add-ovflw' }, this.renderMarkedTimes()), _react2.default.createElement('div', { className: 'button-pannel' }, this.state.status === _constants.timerStatus.PAUSED && _react2.default.createElement('button', { className: 'sd-btn tk-btn pull-left', onClick: this.resetStopwatch }, 'Reset'), (this.state.status === null || this.state.status === _constants.timerStatus.STARTED) && _react2.default.createElement('button', { className: 'sd-btn tk-btn pull-left ' + (this.state.status ? '' : 'blur'), onClick: this.markTime }, 'Mark'), (this.state.status === null || this.state.status === _constants.timerStatus.PAUSED) && _react2.default.createElement('button', { className: 'sd-btn btn-success pull-right', onClick: this.startStopwatch }, 'Start'), this.state.status === _constants.timerStatus.STARTED && _react2.default.createElement('button', { className: 'sd-btn btn-danger pull-right', onClick: this.pauseStopwatch }, 'Stop')));
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'card-display' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'timer-bg' },
+	          time.getTime(this.state.timeInterval)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'add-ovflw' },
+	          this.renderMarkedTimes()
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'button-pannel' },
+	          this.state.status === _constants.timerStatus.PAUSED && _react2.default.createElement(
+	            'button',
+	            { className: 'sd-btn tk-btn pull-left', onClick: this.resetStopwatch },
+	            'Reset'
+	          ),
+	          (this.state.status === null || this.state.status === _constants.timerStatus.STARTED) && _react2.default.createElement(
+	            'button',
+	            { className: 'sd-btn tk-btn pull-left ' + (this.state.status ? '' : 'blur'), onClick: this.markTime },
+	            'Mark'
+	          ),
+	          (this.state.status === null || this.state.status === _constants.timerStatus.PAUSED) && _react2.default.createElement(
+	            'button',
+	            { className: 'sd-btn btn-success pull-right', onClick: this.startStopwatch },
+	            'Start'
+	          ),
+	          this.state.status === _constants.timerStatus.STARTED && _react2.default.createElement(
+	            'button',
+	            { className: 'sd-btn btn-danger pull-right', onClick: this.pauseStopwatch },
+	            'Stop'
+	          )
+	        )
+	      );
 	    }
 	  }]);
 	  return Stopwatch;
@@ -44927,9 +45098,7 @@
 	
 	var _getTime2 = _interopRequireDefault(_getTime);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Timer = function (_Component) {
 	  (0, _inherits3.default)(Timer, _Component);
@@ -45045,34 +45214,94 @@
 	      var _this4 = this;
 	
 	      var time = new _getTime2.default();
-	      return _react2.default.createElement('div', { className: 'card-display' }, (this.state.status === _constants.timerStatus.STARTED || this.state.status === _constants.timerStatus.PAUSED) && _react2.default.createElement('div', { className: 'timer-bg' }, time.getTime(this.state.timeInterval)), this.state.status === null && _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'timer-display' }, _react2.default.createElement('label', null, 'H'), _react2.default.createElement('label', null, 'M'), _react2.default.createElement('label', null, 'S')), _react2.default.createElement('div', { className: 'timer-display' }, _react2.default.createElement('input', {
-	        type: 'number',
-	        min: '0',
-	        max: '99',
-	        placeholder: '00',
-	        value: this.state.hours,
-	        onChange: function onChange(ev) {
-	          return _this4.handleHourChange(ev.target.value);
-	        }
-	      }), ' :', _react2.default.createElement('input', {
-	        type: 'number',
-	        min: '0',
-	        max: '59',
-	        placeholder: '00',
-	        value: this.state.minutes,
-	        onChange: function onChange(ev) {
-	          return _this4.handleMinuteChange(ev.target.value);
-	        }
-	      }), ' :', _react2.default.createElement('input', {
-	        type: 'number',
-	        min: '0',
-	        max: '59',
-	        placeholder: '00',
-	        value: this.state.second,
-	        onChange: function onChange(ev) {
-	          return _this4.handleSecondChange(ev.target.value);
-	        }
-	      }))), this.state.status === null && _react2.default.createElement('button', { className: 'sd-btn btn-success', onClick: this.startTimer }, 'Start'), (this.state.status === _constants.timerStatus.STARTED || this.state.status === _constants.timerStatus.PAUSED) && _react2.default.createElement('button', { className: 'sd-btn tk-btn m5', onClick: this.cancelTimer }, 'Cancel'), this.state.status === _constants.timerStatus.STARTED && _react2.default.createElement('button', { className: 'sd-btn btn-warning m5', onClick: this.pauseTimer }, 'Pause'), this.state.status === _constants.timerStatus.PAUSED && _react2.default.createElement('button', { className: 'sd-btn btn-success m5', onClick: this.resumeTimer }, 'Resume'));
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'card-display' },
+	        (this.state.status === _constants.timerStatus.STARTED || this.state.status === _constants.timerStatus.PAUSED) && _react2.default.createElement(
+	          'div',
+	          { className: 'timer-bg' },
+	          time.getTime(this.state.timeInterval)
+	        ),
+	        this.state.status === null && _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'timer-display' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'H'
+	            ),
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'M'
+	            ),
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'S'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'timer-display' },
+	            _react2.default.createElement('input', {
+	              type: 'number',
+	              min: '0',
+	              max: '99',
+	              placeholder: '00',
+	              value: this.state.hours,
+	              onChange: function onChange(ev) {
+	                return _this4.handleHourChange(ev.target.value);
+	              }
+	            }),
+	            ' :',
+	            _react2.default.createElement('input', {
+	              type: 'number',
+	              min: '0',
+	              max: '59',
+	              placeholder: '00',
+	              value: this.state.minutes,
+	              onChange: function onChange(ev) {
+	                return _this4.handleMinuteChange(ev.target.value);
+	              }
+	            }),
+	            ' :',
+	            _react2.default.createElement('input', {
+	              type: 'number',
+	              min: '0',
+	              max: '59',
+	              placeholder: '00',
+	              value: this.state.second,
+	              onChange: function onChange(ev) {
+	                return _this4.handleSecondChange(ev.target.value);
+	              }
+	            })
+	          )
+	        ),
+	        this.state.status === null && _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn btn-success', onClick: this.startTimer },
+	          'Start'
+	        ),
+	        (this.state.status === _constants.timerStatus.STARTED || this.state.status === _constants.timerStatus.PAUSED) && _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn tk-btn m5', onClick: this.cancelTimer },
+	          'Cancel'
+	        ),
+	        this.state.status === _constants.timerStatus.STARTED && _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn btn-warning m5', onClick: this.pauseTimer },
+	          'Pause'
+	        ),
+	        this.state.status === _constants.timerStatus.PAUSED && _react2.default.createElement(
+	          'button',
+	          { className: 'sd-btn btn-success m5', onClick: this.resumeTimer },
+	          'Resume'
+	        )
+	      );
 	    }
 	  }]);
 	  return Timer;
@@ -45118,9 +45347,7 @@
 	
 	var _weather2 = _interopRequireDefault(_weather);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var WeatherIndex = function (_Component) {
 	  (0, _inherits3.default)(WeatherIndex, _Component);
@@ -45133,7 +45360,12 @@
 	  (0, _createClass3.default)(WeatherIndex, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, _react2.default.createElement(_navBar2.default, { currentPath: this.props.location.pathname }), _react2.default.createElement(_weather2.default, null));
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_navBar2.default, { currentPath: this.props.location.pathname }),
+	        _react2.default.createElement(_weather2.default, null)
+	      );
 	    }
 	  }]);
 	  return WeatherIndex;
@@ -45181,9 +45413,7 @@
 	
 	var _addLocation2 = _interopRequireDefault(_addLocation);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Weather = function (_Component) {
 	  (0, _inherits3.default)(Weather, _Component);
@@ -45196,7 +45426,12 @@
 	  (0, _createClass3.default)(Weather, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'card-display' }, this.props.weatherProvider && this.props.weatherProvider.length > 0 && _react2.default.createElement(_weatherDisplay2.default, null), _react2.default.createElement(_addLocation2.default, null));
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'card-display' },
+	        this.props.weatherProvider && this.props.weatherProvider.length > 0 && _react2.default.createElement(_weatherDisplay2.default, null),
+	        _react2.default.createElement(_addLocation2.default, null)
+	      );
 	    }
 	  }]);
 	  return Weather;
@@ -45244,9 +45479,7 @@
 	
 	var _reactOwlCarousel2 = _interopRequireDefault(_reactOwlCarousel);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var getUpdateTime = function getUpdateTime(date) {
 	  var hour = date.getHours().toString().padStart(2, '0');
@@ -45280,28 +45513,106 @@
 	      if (weatherData) {
 	        var currentWeather = weatherData.currentWeather;
 	
-	        return _react2.default.createElement('div', { key: i }, _react2.default.createElement('h1', null, currentWeather.location.name), _react2.default.createElement('img', { src: currentWeather.icon }), currentWeather.condition, _react2.default.createElement('h1', null, parseInt(currentWeather.temperature.current), '\xB0C'), _react2.default.createElement('div', null, parseInt(currentWeather.temperature.min), '\xB0 | ', parseInt(currentWeather.temperature.max), '\xB0'), _react2.default.createElement('div', { className: 'horizontal-scroll-display' }, weatherData.hourlyForecast.map(this.renderHourlyForecast)), _react2.default.createElement('div', { className: 'light-text' }, 'Last Updated: ', getUpdateTime(currentWeather.date)));
+	        return _react2.default.createElement(
+	          'div',
+	          { key: i },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            currentWeather.location.name
+	          ),
+	          _react2.default.createElement('img', { src: currentWeather.icon }),
+	          currentWeather.condition,
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            parseInt(currentWeather.temperature.current),
+	            '\xB0C'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            parseInt(currentWeather.temperature.min),
+	            '\xB0 | ',
+	            parseInt(currentWeather.temperature.max),
+	            '\xB0'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'horizontal-scroll-display' },
+	            weatherData.hourlyForecast.map(this.renderHourlyForecast)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'light-text' },
+	            'Last Updated: ',
+	            getUpdateTime(currentWeather.date)
+	          )
+	        );
 	      }
 	    }
 	  }, {
 	    key: 'renderHourlyForecast',
 	    value: function renderHourlyForecast(weatherData, i) {
-	      return _react2.default.createElement('div', { key: i }, _react2.default.createElement('h4', null, weatherData.date.toLocaleDateString('en-en', { weekday: 'short', month: 'short', day: 'numeric' })), _react2.default.createElement('h4', null, getHourlyForecastHour(weatherData.date)), _react2.default.createElement('h3', null, parseInt(weatherData.temperature.current), '\xB0C'), _react2.default.createElement('img', { src: weatherData.icon }), weatherData.condition);
+	      return _react2.default.createElement(
+	        'div',
+	        { key: i },
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          weatherData.date.toLocaleDateString('en-en', { weekday: 'short', month: 'short', day: 'numeric' })
+	        ),
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          getHourlyForecastHour(weatherData.date)
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          parseInt(weatherData.temperature.current),
+	          '\xB0C'
+	        ),
+	        _react2.default.createElement('img', { src: weatherData.icon }),
+	        weatherData.condition
+	      );
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
 	
-	      return _react2.default.createElement('div', { className: 'carousel' }, _react2.default.createElement(_reactOwlCarousel2.default, { ref: function ref(el) {
-	          return _this2.carousel = el;
-	        }, options: carouselOptions }, this.props.weatherProvider.map(function (item, i) {
-	        return _this2.renderWeatherForecast(item, i);
-	      })), this.props.weatherProvider.length > 1 && _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'carousel-nav', style: { left: 0 } }, _react2.default.createElement('i', { className: 'fa fa-chevron-left fa-lg pl-2', onClick: function onClick() {
-	          return _this2.carousel.prev();
-	        } })), _react2.default.createElement('div', { className: 'carousel-nav', style: { right: 0 } }, _react2.default.createElement('i', { className: 'fa fa-chevron-right fa-lg pl-2', onClick: function onClick() {
-	          return _this2.carousel.next();
-	        } }))));
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'carousel' },
+	        _react2.default.createElement(
+	          _reactOwlCarousel2.default,
+	          { ref: function ref(el) {
+	              return _this2.carousel = el;
+	            }, options: carouselOptions },
+	          this.props.weatherProvider.map(function (item, i) {
+	            return _this2.renderWeatherForecast(item, i);
+	          })
+	        ),
+	        this.props.weatherProvider.length > 1 && _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'carousel-nav', style: { left: 0 } },
+	            _react2.default.createElement('i', { className: 'fa fa-chevron-left fa-lg pl-2', onClick: function onClick() {
+	                return _this2.carousel.prev();
+	              } })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'carousel-nav', style: { right: 0 } },
+	            _react2.default.createElement('i', { className: 'fa fa-chevron-right fa-lg pl-2', onClick: function onClick() {
+	                return _this2.carousel.next();
+	              } })
+	          )
+	        )
+	      );
 	    }
 	  }]);
 	  return WeatherDisplay;
@@ -46322,9 +46633,7 @@
 	
 	var _weatherDisplay2 = _interopRequireDefault(_weatherDisplay);
 	
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var AddLocation = function (_Component) {
 	  (0, _inherits3.default)(AddLocation, _Component);
@@ -46357,15 +46666,36 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null, _react2.default.createElement('form', { onSubmit: this.onFormSubmit, className: 'Aligner-item' }, _react2.default.createElement('div', { className: 'form-group' }, _react2.default.createElement('input', {
-	        type: 'text',
-	        className: 'form-control',
-	        placeholder: 'Enter a City',
-	        value: this.state.city,
-	        onChange: this.onCityInputChange,
-	        autoCapitalize: 'none',
-	        required: true
-	      })), _react2.default.createElement('div', null, _react2.default.createElement('button', { type: 'submit', className: 'btn btn-primary tab2-btn' }, 'Add'))));
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'form',
+	          { onSubmit: this.onFormSubmit, className: 'Aligner-item' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement('input', {
+	              type: 'text',
+	              className: 'form-control',
+	              placeholder: 'Enter a City',
+	              value: this.state.city,
+	              onChange: this.onCityInputChange,
+	              autoCapitalize: 'none',
+	              required: true
+	            })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'submit', className: 'btn btn-primary tab2-btn' },
+	              'Add'
+	            )
+	          )
+	        )
+	      );
 	    }
 	  }]);
 	  return AddLocation;

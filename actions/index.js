@@ -17,9 +17,9 @@ var _axios2 = _interopRequireDefault(_axios);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var OPEN_WEATHER_BASE_URL = 'http://api.openweathermap.org/data/2.5';
+var OPEN_WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 var OPEN_WEATHER_API_KEY = 'f100da1908a9af01424638ea11cc9c20';
-var OPEN_WEATHER_IMG_URL = 'http://openweathermap.org/img/w';
+var OPEN_WEATHER_IMG_URL = 'https://openweathermap.org/img/w';
 
 function getWeather(url) {
   return new Promise(function (resolve, reject) {
