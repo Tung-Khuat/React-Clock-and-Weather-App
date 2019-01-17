@@ -14,6 +14,6 @@ const createStoreWithMiddleware = applyMiddleware(logger(), thunk)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router history={browserHistory} routes={routes} />
+    <Router history={hashHistory} routes={routes} />
   </Provider>
   , document.querySelector('.container'));
