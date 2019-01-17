@@ -41,5 +41,5 @@ var createStoreWithMiddleware = (0, _redux.applyMiddleware)((0, _reduxLogger2.de
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
   { store: createStoreWithMiddleware(_reducers2.default) },
-  _react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: _routes2.default })
+  _react2.default.createElement(_reactRouter.Router, { history: _reactRouter.hashHistory, routes: _routes2.default })
 ), document.querySelector('.container'));
